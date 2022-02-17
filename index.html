@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># Hey sweetheart, I'm going to write our story</span><br/>
+			<span class="comments"># This story is just like how a wayfarer found her Oasis when she was not even expecting it !!</span><br/>
+			<span class="comments"># 16 November'21, the luckiest day of my life, because i came across you - the saviour of my life !</span><br/>
+			<span class="comments"># We started knowing each other and then ---- </span><br/>
+			<span class="comments"># On 20 Nov'21, You became my LOVE!</span><br/>
+			<span class="comments"># Since then, we are spending a different life every day, with ups and down but still with a strong desire to stay together !!</span>
+			<br/> <br/>
+			<span class="comments"># We enjoy studying together.</span><br/>
+			<span class="comments"># We enjoy being together no matter if it is virtual or what!</span><br/>
+			<span class="comments"># You are the love that came without warning !!</span><br/>
+			<span class="comments"># and you already had my heart before I could say 'No'!</span><br/>			
+			<span class="comments"># Before I knew it, before I was even aware of it, I drowned in the love- you gave me and are giving me !!</span><br/> <br/>
+			<span class="comments"># I see my future with you, holding your hands tightly in every thick and thin</span><br/>
+			<span class="comments"># More lines to write ahead ----</span><br/>
+			<span class="comments"># More feelings to convey ahead -----</span><br/> <br/>
+			<span class="comments"># I am all yours baby, BE MINE and STAY !!</span>
+			<br/> <br/>
+			<span class="comments"># I LOVE YOU (20112021/0)</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Ravi, I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love u forever and ever.<br/>
+					<div class="signature">- Rimi | Your Gadhi</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="copyright">
+		Copyright © 2022 <a> Ravi - Debasmita </a>
+	</div>
+	<div id="listenheart">
+		<a class="github" href="https://drive.google.com/file/d/1sjJL9MTbsslFKkl3Rvd9XC5G6XN8r3D-/view?usp=drivesdk">❤️ Listen to my heart ❤️</a>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2021, 10, 21);
+	together.setHours(24);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
